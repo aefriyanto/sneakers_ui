@@ -9,6 +9,16 @@ class ProductCatalogue extends StatelessWidget {
         appBar: AppBar(
           title: Text("Product Catalogue"),
         ),
+        drawer: Drawer(
+          child: SafeArea(
+            child: Column(
+              children: [
+                ListTile(title: Text("Login")),
+                ListTile(title: Text("Register")),
+              ],
+            ),
+          ),
+        ),
         body: LayoutBuilder(
             builder: (BuildContext context, BoxConstraints constraints) {
           if (constraints.maxWidth < 450) {
