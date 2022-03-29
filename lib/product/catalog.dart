@@ -14,15 +14,15 @@ class ProductCatalogue extends StatelessWidget {
           if (constraints.maxWidth < 450) {
             return CatalogList();
           } else if (constraints.maxWidth < 650) {
-            return CatalogListGrid(
+            return const CatalogListGrid(
               gridCount: 2,
             );
           } else if (constraints.maxWidth < 900) {
-            return CatalogListGrid(
+            return const CatalogListGrid(
               gridCount: 3,
             );
           } else {
-            return CatalogListGrid(gridCount: 4);
+            return const CatalogListGrid(gridCount: 4);
           }
         }));
   }
@@ -98,7 +98,8 @@ class CatalogList extends StatelessWidget {
                     ),
                     Text(
                       product.type,
-                      style: TextStyle(fontFamily: "OpenSans", fontSize: 12),
+                      style:
+                          const TextStyle(fontFamily: "OpenSans", fontSize: 12),
                     ),
                     Text(
                       product.price,
@@ -145,7 +146,8 @@ class CatalogListGrid extends StatelessWidget {
                 Expanded(
                   child: Container(
                     padding: EdgeInsets.only(top: 5),
-                    margin: EdgeInsets.symmetric(vertical: 5, horizontal: 12),
+                    margin:
+                        const EdgeInsets.symmetric(vertical: 5, horizontal: 12),
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
                         color: Color(0xffE9C46A)),
@@ -175,7 +177,7 @@ class CatalogListGrid extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.all(5),
+                  padding: const EdgeInsets.all(5),
                   child: Column(
                     children: [
                       Text(
@@ -191,7 +193,7 @@ class CatalogListGrid extends StatelessWidget {
                       ),
                       Text(
                         product.price,
-                        style: TextStyle(
+                        style: const TextStyle(
                             fontSize: 24, fontWeight: FontWeight.bold),
                       ),
                       const Text(
